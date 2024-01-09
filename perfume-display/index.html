@@ -50,5 +50,23 @@
 		Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
 		Coded by <a href="#">Treasure Ives</a>.
 	</div> -->
+
+
+	<script>
+		function resizeImageChanger() {
+			const image = document.querySelector(".image-section img")
+			if (window.innerWidth < 768) {
+				image.setAttribute('src', 'images/image-product-mobile.jpg')
+			} else {
+				image.setAttribute('src', 'images/image-product-desktop.jpg')
+			}
+		}
+
+		resizeImageChanger()
+		
+		window.addEventListener('resize', function () {
+        resizeImageChanger();
+    });
+	</script>
 </body>
 </html>
